@@ -20,41 +20,32 @@ $ npm run dev
 ## What's Included
 
 ### about webpack:
-- webpack 
+- webpack 3
+- webpack-dev-server 
 - css-loader / style-loader
 - file-loader / url-loader 
 - cross-env 
-- webpack-dev-server 
 - html-webpack-plugin 
 - extract-text-webpack-plugin
-- clean-webpack-plugin
+- copy-webpack-plugin
 
 ### about babel:
 - babel-loader
 - babel-core
+- babel-polyfill
 - babel-preset-env 
-- babel-preset-stage-2 
+- babel-preset-stage-0/1/2/3
+- babel-plugin-component
 - babel-plugin-transform-runtime
-- babel-register
+- babel-plugin-transform-vue-jsx
+- babel-plugin-syntax-jsx
 
 ### about vue:
 - vue
 - vue-router
 - vuex
+- axios
 - vue-loader 
 - vue-template-compiler
-- pug
 - postcss-loader
 - postcss-cssnext
-
-### about eslint:
-- eslint
-- eslint-loader
-- babel-eslint
-- eslint-plugin-html
-- eslint-friendly-formatter
-- eslint-config-standard
-- eslint-plugin-import
-- eslint-plugin-node
-- eslint-plugin-promise
-- eslint-plugin-standard
