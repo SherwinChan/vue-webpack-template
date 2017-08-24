@@ -1,0 +1,21 @@
+  /* 顶部iview loading-bar的样式 */
+  .ivu-loading-bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000
+  }
+
+  .ivu-loading-bar-inner {
+    transition: width .2s linear
+  }
+
+  .ivu-loading-bar-inner-color-primary {
+    background-color: #2d8cf0
+  }
+
+  .ivu-loading-bar-inner-failed-color-error {
+    background-color: #ed3f14
+  }
