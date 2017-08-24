@@ -1,5 +1,5 @@
 # vue-webpack-template
-Template for wepack3 + vue2.
+Template for wepack3 + vue2. 
 
 ## Usage
 
