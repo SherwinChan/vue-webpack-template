@@ -8,6 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "lint": "eslint --ext .js,.vue src"
   },
+  // element-theme自定义主题
   "element-theme": {
     "browsers": [
       "ie > 9",
@@ -19,12 +20,9 @@
     "minimize": false
   },
   "dependencies": {
-    // "vue": "^2.4.2"{{#router}},
-    // "vue-router": "^2.7.0"{{/router}}{{#vuex}},
-    // "vuex": "^2.3.1"{{/vuex}}
-    "vue": "^2.4.2",
-    "vue-router": "^2.7.0",
-    "vuex": "^2.3.1"
+    "vue": "^2.4.2"{{#router}},
+    "vue-router": "^2.7.0"{{/router}}{{#vuex}},
+    "vuex": "^2.3.1"{{/vuex}}
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",    

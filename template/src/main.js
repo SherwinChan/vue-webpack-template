@@ -2,9 +2,9 @@
 import 'babel-polyfill';
 
 import Vue from 'vue';
-import router from './router';
-import store from './store';
-import axios from 'axios'
+{{#router}}import router from './router';{{/router}}
+{{#vuex}}import store from './store';{{/vuex}}
+import Util from './libs/util';
 
 // import 'element-ui/lib/theme-default/index.css'
 // import ElementUI from 'element-ui';
@@ -26,6 +26,7 @@ import App from './app.vue';
 // Vue.component('top-title', Toptitle)
 
 //axios配置
+let axios = Util.ajax;
 Vue.prototype.$http = axios; //注册$http = axios
 let baseURL = window.location.hostname == 'localhost' ? '' : window.location.origin + '/index.php';
 axios.defaults.baseURL = baseURL;
@@ -64,10 +65,10 @@ axios.interceptors.response.use(function (response) {
     console.log(error.response.data);
     console.log(error.response.status);
     // console.log(error.response.headers['x-info']);
-    if (error.response.headers['x-info'] != undefined && error.response.headers['x-info'] != '') {
-      error_message = decodeURIComponent(error.response.headers['x-info']);
-      error_message = (error_message == 'token过期') ? '登录已过期，请重新登录' : error_message;
-    }
+    // if (error.response.headers['x-info'] != undefined && error.response.headers['x-info'] != '') {
+    //   error_message = decodeURIComponent(error.response.headers['x-info']);
+    //   error_message = (error_message == 'token过期') ? '登录已过期，请重新登录' : error_message;
+    // }
     switch (error.response.status) {
       case 404:
         // Toast({
@@ -143,6 +144,7 @@ Vue.mixin({
   },
 })
 
+{{#router}}
 router.beforeEach((to, from, next) => {
   console.log(to, from)
   // iView.LoadingBar.start();
@@ -152,10 +154,11 @@ router.afterEach((to, from, next) => {
   // LoadingBar.finish();
   // window.scrollTo(0, 0)
 });
+{{/router}}
 
 new Vue({
   el: '#app',
-  router: router,
-  store: store,
+  {{#router}}router: router,{{/router}}
+  {{#vuex}}store: store,{{/vuex}}
   render: h => h(App)
 });

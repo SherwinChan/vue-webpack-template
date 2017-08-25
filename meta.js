@@ -24,14 +24,14 @@ module.exports = {
       "type": "string",
       "message": "Author"
     },
-    // "router": {
-    //   "type": "confirm",
-    //   "message": "Install vue-router?"
-    // },
-    // "vuex": {
-    //   "type": "confirm",
-    //   "message": "Install vuex?"
-    // }
+    "router": {
+      "type": "confirm",
+      "message": "Install vue-router?"
+    },
+    "vuex": {
+      "type": "confirm",
+      "message": "Install vuex?"
+    }
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://github.com/SherwinChan/vue-webpack-template"
 };
