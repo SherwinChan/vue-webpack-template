@@ -9,7 +9,6 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.prod.config.js",
     "lint": "eslint --ext .js,.vue src"
   },
-  // element-theme自定义主题
   "element-theme": {
     "browsers": [
       "ie > 9",
