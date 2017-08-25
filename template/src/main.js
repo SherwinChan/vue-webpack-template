@@ -1,9 +1,9 @@
+{{#babel-polyfill}}
 // 转换es6新的api
-import 'babel-polyfill';
-
+import 'babel-polyfill';{{/babel-polyfill}}
 import Vue from 'vue';
-{{#router}}import router from './router';{{/router}}
-{{#vuex}}import store from './store';{{/vuex}}
+{{#router}}import router from './router';{{/router}}{{#vuex}}
+import store from './store';{{/vuex}}
 import Util from './libs/util';
 
 // import 'element-ui/lib/theme-default/index.css'
@@ -28,8 +28,6 @@ import App from './app.vue';
 //axios配置
 let axios = Util.ajax;
 Vue.prototype.$http = axios; //注册$http = axios
-let baseURL = window.location.hostname == 'localhost' ? '' : window.location.origin + '/index.php';
-axios.defaults.baseURL = baseURL;
 // axios.defaults.withCredentials = true; //开启资格证书cookie
 // axios.defaults.headers.post['Content-Type'] = 'multipart/form-data';
 
@@ -157,8 +155,8 @@ router.afterEach((to, from, next) => {
 {{/router}}
 
 new Vue({
-  el: '#app',
-  {{#router}}router: router,{{/router}}
-  {{#vuex}}store: store,{{/vuex}}
+  el: '#app',{{#router}}
+  router: router,{{/router}}{{#vuex}}
+  store: store,{{/vuex}}
   render: h => h(App)
 });
