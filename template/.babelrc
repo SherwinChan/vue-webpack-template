@@ -1,7 +1,8 @@
 {
   "presets": [
     ["env", {
-      "modules": false
+      "modules": false,
+      "useBuiltIns": true  //用到的polyfill才会转换，不会整个polyfill引进
     }]
   ],
   "plugins": [
