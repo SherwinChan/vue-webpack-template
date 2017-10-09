@@ -3,8 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const webpackBaseConfig = require('./webpack.config.js');
-const fs = require('fs');{{#vconsole-webpack-plugin}}
-const vConsolePlugin = require('vconsole-webpack-plugin');{{/vconsole-webpack-plugin}}
+const fs = require('fs');
 
 fs.open('./src/config/env.js', 'w', function (err, fd) {
   const buf = 'export default "development";';
@@ -24,9 +23,6 @@ module.exports = merge(webpackBaseConfig, {
       inject: true, //scripte插入到body底部
       // minify: false,  //压缩 {...} | false
       // hash: true, //是否生成hash值，默认false
-    }){{#vconsole-webpack-plugin}},
-    new vConsolePlugin({
-      enable: true // 开启vconsole调试工具，发布代码前记得改回 false
-    }),{{/vconsole-webpack-plugin}}
+    })
   ]
 });

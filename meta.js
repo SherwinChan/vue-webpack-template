@@ -35,11 +35,7 @@ module.exports = {
     "babel-polyfill": {
       "type": "confirm",
       "message": "Install babel-polyfill?"
-    },
-    "vconsole-webpack-plugin": {
-      "type": "confirm",
-      "message": "Install vconsole-webpack-plugin for mobile console?"
-    },
+    }
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://github.com/SherwinChan/vue-webpack-template"
 };
