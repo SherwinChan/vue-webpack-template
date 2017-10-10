@@ -37,17 +37,17 @@
     window.onerror = function (errorMessage) {
       if (errorMessage.indexOf('缺少标识符') >= 0)
         browserSupport();
-      console.log('errorMessage：', errorMessage)
+      // console.log('errorMessage：', errorMessage)
     }
 
     function browserSupport() {
-      console.log(navigator)
+      // console.log(navigator)
       var userAgent = window.navigator.userAgent.toLowerCase();
       var index = userAgent.indexOf("msie");
       if (index >= 0) {
         //只有IE 10 及以下才有MSIE标识
         var str = userAgent.substr(index + 5, 4).split(".");
-        console.log(index, str)
+        // console.log(index, str)
         if (Number(str[0]) < 9) {
           //IE < 9 不支持
           alert("你的IE浏览器版本太低，请升级浏览器至IE9.0或以上版本进行浏览")
