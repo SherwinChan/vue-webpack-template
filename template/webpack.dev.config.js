@@ -11,7 +11,10 @@ fs.open('./src/config/env.js', 'w', function (err, fd) {
 });
 
 module.exports = merge(webpackBaseConfig, {
-  // devtool: '#source-map',
+  // devtool: '#source-map',{{#vconsole}}
+  entry: {
+    vconsole: path.resolve(__dirname, './src/libs/vconsole.js')
+  },{{/vconsole}}
   output: {
     publicPath: '/dist/',
   },

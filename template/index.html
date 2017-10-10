@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
-    <title>vue-webpack-template</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="zh-CN">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- <meta http-equiv="Cache-Control" content="max-age=2592000"> -->
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="apple-mobile-web-app-title" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="renderer" content="webkit">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="browsermode" content="application">
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <title>title</title>
+
+  <!-- <link rel="shortcut icon" type="image/ico" href="https://sj-public.b0.upaiyun.com/image/sjico/favicon.ico"> -->
+  <link href="https://sj-public.b0.upaiyun.com/css/sw_reset_pc.css" rel="stylesheet">
+
+<link href="/dist/main.css" rel="stylesheet"></head>
+
+<body>
+  <!--[if lt IE 9]>
+    <div style="padding:16px 5px;">您正在使用 <strong>过时的</strong> 浏览器. 是时候 <a href="http://browsehappy.com/">更换一个更好的浏览器</a> 来提升用户体验.</div>
+  <![endif]-->
+  <div id="app"></div>
+  <script>
+    window.onerror = function (errorMessage) {
+      if (errorMessage.indexOf('缺少标识符') >= 0)
+        browserSupport();
+      // console.log('errorMessage：', errorMessage)
+    }
+
+    function browserSupport() {
+      // console.log(navigator)
+      var userAgent = window.navigator.userAgent.toLowerCase();
+      var index = userAgent.indexOf("msie");
+      if (index >= 0) {
+        //只有IE 10 及以下才有MSIE标识
+        var str = userAgent.substr(index + 5, 4).split(".");
+        // console.log(index, str)
+        if (Number(str[0]) < 9) {
+          //IE < 9 不支持
+          alert("你的IE浏览器版本太低，请升级浏览器至IE9.0或以上版本进行浏览")
+        }
+      }
+    }
+  </script>
+  <script type="text/javascript" src="/dist/vendors.js"></script>
+  <script type="text/javascript" src="/dist/main.js"></script>
+  <script type="text/javascript" src="/dist/vconsole.js"></script>
+</body>
 </html>

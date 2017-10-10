@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="all-container">
     <div>all-container</div>
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 

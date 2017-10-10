@@ -19,6 +19,19 @@ module.exports = merge(webpackBaseConfig, {
         NODE_ENV: '"production"'
       }
     }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: path.resolve(__dirname, './src/template/index.html'),
+      inject: true, //scripte插入到body底部
+      minify: {
+        minifyCSS: true,
+        minifyJS: true,
+        removeComments: true, //去掉注释
+        collapseWhitespace: true, //去掉空格
+      }, //压缩 {...} | false
+      excludeChunks: ['vconsole'], //不包含vconsole模块
+      // hash: true, //是否生成hash值，默认false
+    }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: false,
       // 最紧凑的输出

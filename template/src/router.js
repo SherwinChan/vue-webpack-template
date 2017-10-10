@@ -38,24 +38,12 @@ export const constantRouterMap = [
   },
   {
     // 功能开发中
-    path: '/building',
-    name: 'Building',
+    path: '*',
+    name: '404',
     meta: {
-      title: '',
+      title: '404 功能建设中',
     },
-    redirect: {
-      name: 'Building_index'
-    },
-    component: AllContainer,
-    children: [{
-      path: 'index',
-      name: 'Building_index',
-      meta: {
-        title: '',
-        menu_name: 'Building'
-      },
-      component: Building
-    }]
+    component: Building,
   },
 ]
 
