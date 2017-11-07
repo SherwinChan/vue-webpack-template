@@ -156,37 +156,3 @@ module.exports = {
   },
   // devtool: '#eval-source-map'
 }
-
-if (process.env.NODE_ENV === 'production') {
-  console.log('webpack production 压缩')
-  // module.exports.devtool = '#source-map'
-  // module.exports.output.publicPath = '/admin/', //文件资源路径  
-    // http://vue-loader.vuejs.org/en/workflow/production.html
-    module.exports.plugins = (module.exports.plugins || []).concat([
-      new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: '"production"'
-        }
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        sourceMap: false,          
-        // 最紧凑的输出
-        mangle: true,
-        beautify: false,
-        // 删除所有的注释
-        comments: false,
-        compress: {
-          // 在UglifyJs删除没有用到的代码时不输出警告
-          warnings: false,
-          // 删除所有的 `console` 语句
-          // 还可以兼容ie浏览器
-          drop_console: true,
-          // // 内嵌定义了但是只用到一次的变量
-          collapse_vars: true,
-        }
-      }),
-      new webpack.LoaderOptionsPlugin({
-        minimize: true
-      })
-    ])
-}
