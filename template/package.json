@@ -32,6 +32,7 @@
     "babel-loader": "^7.1.1",
     "babel-plugin-component": "^0.9.1",
     "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",    
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",
     "babel-polyfill": "^6.23.0",
