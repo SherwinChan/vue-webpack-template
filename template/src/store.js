@@ -39,21 +39,25 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    // setMinHeight({
-    //   state
+    // getMessageCount({
+    //   state,
+    //   getters,
+    //   commit
     // }) {
-    //   console.log("change resize minHeight")
-    //   if (state.can_change_height) {
-    //     state.can_change_height = false;
-    //     const all_h = document.documentElement.clientHeight || window.innerHeight;
-    //     state.minHeight = all_h;
-    //     console.log(state.minHeight)
-    //     setTimeout(function () {
-    //       state.can_change_height = true;
-    //       const all_h = document.documentElement.clientHeight || window.innerHeight;
-    //       state.minHeight = all_h;
-    //     }, 1000)
-    //   }
+    //   return new Promise(resolve => {
+    //     axios.get(state.api.messageCount, {
+    //       params: {
+    //         token: getters.token
+    //       }
+    //     }).then(response => {
+    //       if (response.status === 200) {
+    //         commit('setMessageCount', parseInt(response.data))
+    //         console.log("message_count", getters.message_count)
+    //       }
+    //     }).then(() => {
+    //       resolve()
+    //     })
+    //   })
     // },
   }
 })
