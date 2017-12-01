@@ -145,7 +145,7 @@ Vue.mixin({
 {{#router}}
 router.beforeEach((to, from, next) => {
   console.log(to, from)
-  // iView.LoadingBar.start();
+  // LoadingBar.start();
   next();
 });
 router.afterEach((to, from, next) => {
