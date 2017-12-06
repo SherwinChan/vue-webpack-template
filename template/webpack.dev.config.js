@@ -11,10 +11,10 @@ fs.open('./src/config/env.js', 'w', function (err, fd) {
 });
 
 module.exports = merge(webpackBaseConfig, {
-  // devtool: '#source-map',{{#vconsole}}
+  // devtool: '#source-map',{{#eruda}}
   entry: {
-    vconsole: path.resolve(__dirname, './src/libs/vconsole.js')
-  },{{/vconsole}}
+    eruda: path.resolve(__dirname, './src/libs/eruda.js')
+  },{{/eruda}}
   output: {
     publicPath: '/dist/',
   },
@@ -23,7 +23,7 @@ module.exports = merge(webpackBaseConfig, {
       filename: 'index.html',
       template: path.resolve(__dirname, './src/template/index.html'),
       inject: true, //scripte插入到body底部
-      chunks: ['vendors', 'vconsole', 'main'],
+      chunks: ['vendors', 'eruda', 'main'],
       chunksSortMode: 'manual'
       // minify: false,  //压缩 {...} | false
       // hash: true, //是否生成hash值，默认false

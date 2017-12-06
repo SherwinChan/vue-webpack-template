@@ -36,9 +36,9 @@ module.exports = {
       "type": "confirm",
       "message": "Install babel-polyfill?"
     },
-    "vconsole": {
+    "eruda": {
       "type": "confirm",
-      "message": "Install vconsole for android and ios debug?"
+      "message": "Install eruda Console for Mobile Browsers?"
     }
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://github.com/SherwinChan/vue-webpack-template"
