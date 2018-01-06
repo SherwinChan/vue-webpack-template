@@ -9,7 +9,7 @@
     "transform-object-rest-spread", //es2017的...扩展运算符转换
     // ["component", [{
     //   "libraryName": "element-ui",
-    //   "styleLibraryName": "theme-default"
+    //   "styleLibraryName": "theme-chalk"
     // }]]
     // "transform-vue-jsx"
   ]
