@@ -127,10 +127,15 @@ module.exports = {
       filename: '[name].css?v=[contenthash]',
       allChunks: true
     }),
+    // 开启缓存模块id
+    new webpack.HashedModuleIdsPlugin(),
     // 抽离js
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendors',
-      filename: 'vendors.js'
+      // filename: 'vendors.js?v=[hash]' 
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest'
     }),
     // html生成
     new HtmlWebpackPlugin({
@@ -140,11 +145,11 @@ module.exports = {
       // minify: false,  //压缩 {...} | false
       // hash: true, //是否生成hash值，默认false
     }),
-    // vue-router的mode为history有用
-    new CopyWebpackPlugin([{
-      // copy一份.htaccess到打包目录
-      from: path.resolve(__dirname, './src/template/.htaccess'),
-    }]),
+    // // vue-router的mode为history有用
+    // new CopyWebpackPlugin([{
+    //   // copy一份.htaccess到打包目录
+    //   from: path.resolve(__dirname, './src/template/.htaccess'),
+    // }]),
 
   ],
   devServer: {
