@@ -4,9 +4,9 @@
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.jpeg|\.gif|robots\.txt|\.svg)$ [NC]
         RewriteCond $1 !^(Public)
-        RewriteRule ^(.*)$ /admin/index.html [QSA,PT,L]
+        RewriteRule ^(.*)$ /app/index.html [QSA,PT,L]
 
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_URI} (\.css|\.js|\.png|\.jpg|\.jpeg|\.gif|\.svg)$ [NC]
-        RewriteRule ((\w+\.)*\w+\.(css|js|png|jpg|jpeg|gif|svg|ttf|eot))$ /admin/$1 [NC,L]
+        RewriteRule ((\w+\.)*\w+\.(css|js|png|jpg|jpeg|gif|svg|ttf|eot))$ /app/$1 [NC,L]
 </IfModule>

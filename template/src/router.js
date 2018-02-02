@@ -51,7 +51,7 @@ export const constantRouterMap = [
 // 路由配置
 const RouterConfig = {
   mode: 'history',
-  base: '/admin/',
+  base: '/app/',
   routes: constantRouterMap
 };
 
