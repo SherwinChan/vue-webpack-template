@@ -10,7 +10,11 @@
     // ["component", [{
     //   "libraryName": "element-ui",
     //   "styleLibraryName": "theme-chalk"
-    // }]]
+    // }]],
+    // ["import", {
+    //   "libraryName": "iview",
+    //   "libraryDirectory": "src/components"
+    // }],
     // "transform-vue-jsx"
   ]
 }

@@ -6,7 +6,7 @@ import Vue from 'vue';
 import store from './store';{{/vuex}}
 import Util from './libs/util';
 
-// import 'element-ui/lib/theme-default/index.css'
+// import 'element-ui/lib/theme-chalk/index.css'
 // import ElementUI from 'element-ui';
 // Vue.use(ElementUI)
 
