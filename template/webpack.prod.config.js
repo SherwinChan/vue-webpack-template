@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const webpackBaseConfig = require('./webpack.config.js');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const fs = require('fs');
 
 fs.open('./src/config/env.js', 'w', function (err, fd) {
@@ -15,6 +16,8 @@ module.exports = merge(webpackBaseConfig, {
     publicPath: '/app/', //文件资源路径  
   },
   plugins: [
+    // new CleanWebpackPlugin(['dist/*']),
+    // new CleanWebpackPlugin(['dist/prod/*']),    
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
@@ -31,7 +34,7 @@ module.exports = merge(webpackBaseConfig, {
         collapseWhitespace: true, //去掉空格
         removeAttributeQuotes: true, //删除属性引号
       }, //压缩 {...} | false
-      excludeChunks: ['vconsole'], //不包含vconsole模块
+      excludeChunks: ['eruda'], //不包含eruda模块
       // hash: true, //是否生成hash值，默认false
     }),
     new webpack.optimize.UglifyJsPlugin({
