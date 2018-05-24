@@ -134,9 +134,9 @@ module.exports = {
       name: 'vendors',
       // filename: 'vendors.js?v=[hash]' 
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest'
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'manifest'
+    // }),
     // html生成
     new HtmlWebpackPlugin({
       filename: 'index.html',
