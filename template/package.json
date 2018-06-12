@@ -22,22 +22,24 @@
   "dependencies": {
     "vue": "^2.5.13"{{#router}},
     "vue-router": "^3.0.1"{{/router}}{{#vuex}},
-    "vuex": "^3.0.1"{{/vuex}}
+    "vuex": "^3.0.1"{{/vuex}}{{#eruda}},
+    "eruda": "^1.3.2"{{/eruda}}
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.4",    
-    "axios": "^0.17.1",
-    "babel-core": "^6.25.0",
+    "autoprefixer": "^8.6.2",
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
-    "babel-plugin-component": "^1.0.0",
-    "babel-plugin-import": "^1.6.3",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-import": "^1.7.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",    
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
@@ -58,8 +60,7 @@
     "postcss-loader": "^2.0.10",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
-    "url-loader": "^0.6.2",{{#eruda}}
-    "eruda": "^1.3.2",{{/eruda}}
+    "url-loader": "^0.6.2",
     "vue-loader": "^13.6.2",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0",

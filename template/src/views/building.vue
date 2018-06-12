@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="tips">
-    功能开发中
+    404找不到页面
   </div>
 </template>
 <script>

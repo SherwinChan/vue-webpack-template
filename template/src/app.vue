@@ -16,8 +16,39 @@
     created() {
       console.log("app created")
     },
+    mounted() {
+      // this.viewPortInit();
+    },
     methods: {
-
+      // getQueryString(name) {
+      //   //获取地址栏url的参数，若用vue-router则用$route.query即可       
+      //   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      //   var r = window.location.search.substr(1).match(reg);
+      //   if (r != null) {
+      //     return unescape(r[2]);
+      //   }
+      //   return null;
+      // },
+      viewPortInit(max_width = 480) {
+        // 响应式布局
+        // max_width为all-container的max-width
+        let doc = document;
+        let win = window;
+        let docEl = doc.documentElement;
+        let resizeEvt =
+          "orientationchange" in window ? "orientationchange" : "resize";
+        let recalc = function () {
+          let clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          clientWidth = clientWidth > max_width ? max_width : clientWidth;
+          // 1242是设计图的宽度，所以除12.42得100单位比例
+          let fontsize = parseInt(clientWidth / 12.42) + "px";
+          docEl.style.fontSize = fontsize
+        };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener("DOMContentLoaded", recalc, false);
+      }
     }
   };
 </script>
@@ -82,7 +113,7 @@
   }
 
   .el-list-enter-active,
-  {
+    {
     transition: all .8s
   }
 

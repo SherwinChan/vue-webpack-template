@@ -10,6 +10,16 @@ import Util from './libs/util';
 // import ElementUI from 'element-ui';
 // Vue.use(ElementUI)
 
+// import {
+//   MessageBox,
+//   Toast,
+//   Indicator,
+// } from 'mint-ui';
+
+// Vue.prototype.$MessageBox = MessageBox; //注册$http = axios
+// Vue.prototype.$Toast = Toast; //注册$http = axios
+// Vue.prototype.$Indicator = Indicator; //注册$http = axios
+
 // import LoadingBar from 'iview/src/components/loading-bar';
 // // 讲本项目所用到的iview组件的css抽离出来
 // import './assets/css/iview-split.css';
@@ -17,13 +27,16 @@ import Util from './libs/util';
 // // 字体图片icomoon
 // import './assets/icomoon/style.css';
 
+// 图片懒加载
+// require('./assets/js/lazyload')
+
 
 import App from './app.vue';
 
 
 //自定义全局组件
-// import Toptitle from './components/toptitle.vue'
-// Vue.component('top-title', Toptitle)
+// import LoadingSpinner from './components/loadingspinner.vue'
+// Vue.component('loading-spinner', LoadingSpinner)
 
 //axios配置
 let axios = Util.ajax;
