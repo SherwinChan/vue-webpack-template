@@ -6,6 +6,7 @@
     }]
   ],
   "plugins": [
+    "syntax-dynamic-import",  // router.js 懒加载import解析
     "transform-object-rest-spread", //es2017的...扩展运算符转换
     // ["component", [{
     //   "libraryName": "element-ui",
