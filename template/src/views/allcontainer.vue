@@ -22,11 +22,10 @@
   //     }
 
   //     if (timer) { // 如果定时器还在, 说明前一次延迟执行还未完成
-  //       return false;
+  //       clearTimeout(timer);
   //     }
 
   //     timer = setTimeout(function () {
-  //       clearTimeout(timer);
   //       timer = null;
   //       _self.apply(_this, args);
   //     }, interval || 500);
