@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  // // 函数节流
-  // let throttle = function (fn, interval) {
+  // // 函数防抖，在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+  // let debounce = function (fn, interval) {
   //   let _self = fn, // 保存需要被延迟执行的函数引用
   //     timer, // 计时器
   //     firstTime = true; // 是否第一次调用
@@ -42,11 +42,32 @@
     computed: {},
     created() {
       console.log("allcontainer created")
+
+      // let shuffle_list = [{
+      //   // 结果1 
+      //   name: [12312,123152344,2342343,4213332],
+      //   result: [{
+      //     name: 人员name,
+      //     task: 任务name
+      //   },{
+      //     name: 人员name2,
+      //     task: 任务name2
+      //   },]
+      // },{
+      //   // 结果2
+      //   name: [12312,123152344,2342343,4213332],
+      //   result: [{
+      //     name: 人员name,
+      //     task: 任务name
+      //   }]
+      // }]
+      
+      // localStorage.setItem('task20180904', JSON.stringify(this.shuffle_list))
     },
     mounted() {
       // const _this = this;
       // this.$store.dispatch("setMinHeight")
-      // window.onresize = throttle(function () {
+      // window.onresize = debounce(function () {
       //   _this.$store.dispatch("setMinHeight")
       //   _this.menuWidth = _this.$refs['menu'].$el.clientWidth || 213.33;
       // }, 500);
