@@ -2,17 +2,21 @@
   "presets": [
     ["env", {
       "modules": false,
-      "useBuiltIns": true  //用到的polyfill才会转换，不会整个polyfill引进
+      "useBuiltIns": true //用到的polyfill才会转换，不会整个polyfill引进
     }]
   ],
   "plugins": [
-    "syntax-dynamic-import",  // router.js 懒加载import解析
+    "syntax-dynamic-import", // router.js 懒加载import解析
     "transform-object-rest-spread", //es2017的...扩展运算符转换
     // ["component", [{
     //   "libraryName": "element-ui",
     //   "styleLibraryName": "theme-chalk"
     // }]],
     // ["import", {
+    //   "libraryName": "muse-ui",
+    //   "libraryDirectory": "lib",
+    //   "camel2DashComponentName": false
+    // }, {
     //   "libraryName": "iview",
     //   "libraryDirectory": "src/components"
     // }],

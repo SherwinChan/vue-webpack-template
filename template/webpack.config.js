@@ -4,14 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-//muse-ui组件库
-const museUiThemePath = path.join(
-  __dirname,
-  'node_modules',
-  'muse-ui',
-  'src/styles/themes/variables/default.less'
-)
-
 module.exports = {
   entry: {
     // main: path.resolve(__dirname, './src/main.js'),
@@ -32,15 +24,7 @@ module.exports = {
           loaders: {
 
             less: ExtractTextPlugin.extract({
-              use: ['css-loader?minimize', 'postcss-loader', {
-                loader: 'less-loader',
-                options: {
-                  // muse-ui组件库
-                  globalVars: {
-                    museUiTheme: `'${museUiThemePath}'`,
-                  }
-                }
-              }],
+              use: ['css-loader?minimize', 'postcss-loader', 'less-loader'],
               fallback: 'style-loader'
             }),
 
@@ -116,7 +100,6 @@ module.exports = {
       '@': path.join(__dirname, "./src"),
       '@images': path.join(__dirname, "./src/assets/images"),
       '@components': path.join(__dirname, "./src/components"),
-      'muse-components': 'muse-ui/src', //muse-ui组件库
     }
   },
   plugins: [

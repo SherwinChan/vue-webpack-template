@@ -19,15 +19,15 @@ module.exports = merge(webpackBaseConfig, {
     publicPath: '/dist/',
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   filename: 'index.html',
-    //   template: path.resolve(__dirname, './src/template/index.html'),
-    //   inject: true, //scripte插入到body底部
-    //   chunks: ['manifest', 'vendors', 'eruda', 'main'],
-    //   chunksSortMode: 'manual'
-    //   // minify: false,  //压缩 {...} | false
-    //   // hash: true, //是否生成hash值，默认false
-    // }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: path.resolve(__dirname, './src/template/index.html'),
+      inject: true, //scripte插入到body底部
+      chunks: ['manifest', 'vendors', 'eruda', 'main'],
+      chunksSortMode: 'manual'
+      // minify: false,  //压缩 {...} | false
+      // hash: true, //是否生成hash值，默认false
+    }),
     // 在项目处生成一个html供localhost访问
     // new HtmlWebpackPlugin({
     //   filename: '../index.html',

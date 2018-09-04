@@ -20,9 +20,16 @@ import Util from './libs/util';
 // Vue.prototype.$Toast = Toast; //注册$http = axios
 // Vue.prototype.$Indicator = Indicator; //注册$http = axios
 
-// import LoadingBar from 'iview/src/components/loading-bar';
+// import LoadingBar from 'iview';
 // // 讲本项目所用到的iview组件的css抽离出来
 // import './assets/css/iview-split.css';
+
+// import 'muse-ui/lib/styles/base.less';
+// import { Button, Select } from 'muse-ui';
+// import 'muse-ui/lib/styles/theme.less';
+
+// Vue.use(Button);
+// Vue.use(Select);
 
 // // 字体图片icomoon
 // import './assets/icomoon/style.css';
