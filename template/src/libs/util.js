@@ -14,7 +14,7 @@ if (env === 'development') {
 } else {
   if (env === 'production') {
     // 生产环境的api以服务器域名地址为准
-    // ajaxUrl = window.location.origin + '/index.php';
+    // ajaxUrl = window.location.hostname == 'localhost' ? ajaxUrl : window.location.origin + '/index.php';
   }
 }
 {{#vuex}}
