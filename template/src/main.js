@@ -2,7 +2,7 @@
 // 转换es6新的api
 import 'babel-polyfill';{{/babel-polyfill}}
 import Vue from 'vue';
-{{#router}}import router from './router';{{/router}}{{#vuex}}
+{{#router}}import router from './router/index.js';{{/router}}{{#vuex}}
 import store from './store';{{/vuex}}
 import Util from './libs/util';
 

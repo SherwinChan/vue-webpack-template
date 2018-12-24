@@ -129,10 +129,10 @@ module.exports = {
       // hash: true, //是否生成hash值，默认false
     }),
     // // vue-router的mode为history有用
-    // new CopyWebpackPlugin([{
-    //   // copy一份.htaccess到打包目录
-    //   from: path.resolve(__dirname, './src/template/.htaccess'),
-    // }]),
+    new CopyWebpackPlugin([{
+      // copy一份.htaccess到打包目录
+      from: path.resolve(__dirname, './src/template/.htaccess'),
+    }]),
 
   ],
   devServer: {

@@ -8,7 +8,9 @@ const fs = require('fs');
 
 fs.open('./src/config/env.js', 'w', function (err, fd) {
   const buf = 'export default "production";';
-  fs.write(fd, buf, 'utf-8', 0, function (err, written, buffer) {});
+  fs.write(fd, buf, 'utf-8', 0, function (err, written, buffer) {
+    fs.close(fd);
+  });
 });
 
 module.exports = merge(webpackBaseConfig, {

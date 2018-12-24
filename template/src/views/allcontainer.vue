@@ -42,27 +42,6 @@
     computed: {},
     created() {
       console.log("allcontainer created")
-
-      // let shuffle_list = [{
-      //   // 结果1 
-      //   name: [12312,123152344,2342343,4213332],
-      //   result: [{
-      //     name: 人员name,
-      //     task: 任务name
-      //   },{
-      //     name: 人员name2,
-      //     task: 任务name2
-      //   },]
-      // },{
-      //   // 结果2
-      //   name: [12312,123152344,2342343,4213332],
-      //   result: [{
-      //     name: 人员name,
-      //     task: 任务name
-      //   }]
-      // }]
-      
-      // localStorage.setItem('task20180904', JSON.stringify(this.shuffle_list))
     },
     mounted() {
       // const _this = this;

@@ -1,5 +1,5 @@
 # vue-webpack-template
-Template for wepack3 + vue2. 
+vue-cli 2.x Template for webpack3 + vue2. 
 
 ## Usage
 
@@ -49,3 +49,4 @@ $ npm run dev
 - vue-template-compiler
 - postcss-loader
 - postcss-cssnext
+- babel-plugin-import
