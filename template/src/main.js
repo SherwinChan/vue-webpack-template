@@ -3,7 +3,7 @@
 import 'babel-polyfill';{{/babel-polyfill}}
 import Vue from 'vue';
 {{#router}}import router from './router/index.js';{{/router}}{{#vuex}}
-import store from './store';{{/vuex}}
+import store from './store/index.js';{{/vuex}}
 import Util from './libs/util';
 
 // import 'element-ui/lib/theme-chalk/index.css'
@@ -138,6 +138,11 @@ axios.interceptors.response.use(function (response) {
 
 // 全局mixin
 Vue.mixin({
+  // computed:{
+  //   sjapp(){
+  //     return this.$store.state.appLogin.sjapp
+  //   },
+  // },
   methods: {
     formatTimestamp(_timestamp, format) {
       if (_timestamp) {
@@ -161,18 +166,6 @@ Vue.mixin({
     }
   },
 })
-
-{{#router}}
-router.beforeEach((to, from, next) => {
-  console.log(to, from)
-  // LoadingBar.start();
-  next();
-});
-router.afterEach((to, from, next) => {
-  // LoadingBar.finish();
-  // window.scrollTo(0, 0)
-});
-{{/router}}
 
 new Vue({
   el: '#app',{{#router}}
