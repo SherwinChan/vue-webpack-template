@@ -140,7 +140,7 @@ axios.interceptors.response.use(function (response) {
 Vue.mixin({
   // computed:{
   //   sjapp(){
-  //     return this.$store.state.appLogin.sjapp
+  //     return this.$store.state.app.sjapp
   //   },
   // },
   methods: {
