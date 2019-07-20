@@ -52,7 +52,67 @@
     }
   };
 </script>
-<style lang="css">
+<style lang="scss">
+  .mu-list .mu-item {
+    height: auto;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  div.mint-toast {
+    z-index: 99999999;
+  }
+
+  div.mint-indicator {
+    position: relative;
+    z-index: 99999999;
+  }
+
+  .no-tips {
+    padding: .35rem 0;
+    font-size: .6rem;
+    text-align: center;
+
+    .img-nodata {
+      width: 7rem;
+    }
+
+    .no-more {
+      font-size: .5rem;
+      color: #aaa;
+    }
+  }
+
+  @supports (-webkit-line-clamp: 2) and (display: -webkit-box) and (-webkit-box-orient: vertical) {
+
+    .text-flow-2,
+    .text-flow-3,
+    .text-flow-4 {
+      font-size: .5rem;
+      line-height: .675rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+
+    .text-flow-2 {
+      height: 1.35rem;
+      -webkit-line-clamp: 2;
+
+    }
+
+    .text-flow-3 {
+      height: 2.025rem;
+      -webkit-line-clamp: 3;
+    }
+
+    .text-flow-4 {
+      height: 2.76rem;
+      -webkit-line-clamp: 4;
+    }
+  }
+
   .color-red {
     color: #f00;
   }
@@ -112,8 +172,7 @@
     outline: 0;
   }
 
-  .el-list-enter-active,
-    {
+  .el-list-enter-active {
     transition: all .8s
   }
 
